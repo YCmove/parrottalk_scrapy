@@ -1,0 +1,76 @@
+2019-07-05 15:16:51 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: parrottalk_scrapy)
+2019-07-05 15:16:51 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.7 |Anaconda, Inc.| (default, Oct 23 2018, 19:16:44) - [GCC 7.3.0], pyOpenSSL 18.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.4.2, Platform Linux-4.15.0-54-generic-x86_64-with-debian-buster-sid
+2019-07-05 15:16:51 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'parrottalk_scrapy', 'NEWSPIDER_MODULE': 'parrottalk_scrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['parrottalk_scrapy.spiders']}
+2019-07-05 15:16:51 [scrapy.extensions.telnet] INFO: Telnet Password: ca27a2fe4ce9256c
+2019-07-05 15:16:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-05 15:16:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-05 15:16:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-05 15:16:51 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-07-05 15:16:51 [scrapy.core.engine] INFO: Spider opened
+2019-07-05 15:16:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-05 15:16:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-07-05 15:16:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parrottalks.com/robots.txt> (referer: None)
+2019-07-05 15:17:51 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2019-07-05 15:18:51 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-05 15:18:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.parrottalks.com/api/catalogs?__rnd=1562310364589&note_only=1> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2019-07-05 15:19:51 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-05 15:19:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.parrottalks.com/api/catalogs?__rnd=1562310364589&note_only=1> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2019-07-05 15:20:51 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-05 15:20:52 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET https://www.parrottalks.com/api/catalogs?__rnd=1562310364589&note_only=1> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2019-07-05 15:20:52 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.parrottalks.com/api/catalogs?__rnd=1562310364589&note_only=1>
+Traceback (most recent call last):
+  File "/home/stream/.conda/envs/py36/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2019-07-05 15:20:52 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-05 15:20:52 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 3,
+ 'downloader/request_bytes': 8214,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 270,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 5, 7, 20, 52, 534541),
+ 'log_count/DEBUG': 4,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 13,
+ 'memusage/max': 56868864,
+ 'memusage/startup': 55275520,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 2,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2019, 7, 5, 7, 16, 51, 924986)}
+2019-07-05 15:20:52 [scrapy.core.engine] INFO: Spider closed (finished)
